@@ -11,6 +11,10 @@ budgetmax = budget_data["Profit/Losses"].max()
 budget_data["Profit/Losses"].min()
 budget_data["Date"].index(max(budgetmax))
 
+print("Greatest Increase in Profits: " + str(months[revenue_change.index(max(revenue_change))+1]) + " " + "$" + str(greatest_increase))
+
+    print("Greatest Decrease in Profits: " + str(months[revenue_change.index(min(revenue_change))+1]) + " " + "$" + str(greatest_decrease))
+
 -------------------------------------------------------------------
 
 import os
