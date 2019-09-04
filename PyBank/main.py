@@ -34,3 +34,13 @@ with open(budget_data, newline="") as csvfile:
     print("Average Change: " + "$" + str(revenue_average))
     print("Greatest Increase in Profits: " + str(months[revenue_change.index(max(revenue_change))+1]) + " " + "$" + str(greatest_increase))
     print("Greatest Decrease in Profits: " + str(months[revenue_change.index(min(revenue_change))+1]) + " " + "$" + str(greatest_decrease))
+    
+    file = open("Financial Analysis.txt","w")
+    file.write("Financial Analysis" + "\n")
+    file.write("-------------------------" + "\n")
+    file.write("Total Months: " + str(total_months) + "\n")
+    file.write("Total Revenue: " + "$" + str(sum(P)) + "\n")
+    file.write("Average change: " + "$" + str(revenue_average) + "\n")
+    file.write("Greatest Increase in Profits: " + str(months[revenue_change.index(max(revenue_change))+1]) + " " + "$" + str(greatest_increase) + "\n")
+    file.write("Greatest Decrease in Profits: " + str(months[revenue_change.index(min(revenue_change))+1]) + " " + "$" + str(greatest_decrease) + "\n")
+    file.close()
