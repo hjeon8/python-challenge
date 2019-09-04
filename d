@@ -30,3 +30,26 @@ with open(output_file,"w") as file:
     file.write(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str(max_decrease_value))})")
 
 
+
+
+
+
+.3.........
+
+    file = open("output.txt","w")
+
+    file.write("Financial Analysis" + "\n")
+
+    file.write("...................................................................................." + "\n")
+
+    file.write("total months: " + str(total_months) + "\n")
+
+    file.write("Total: " + "$" + str(sum(P)) + "\n")
+
+    file.write("Average change: " + "$" + str(revenue_average) + "\n")
+
+    file.write("Greatest Increase in Profits: " + str(months[revenue_change.index(max(revenue_change))+1]) + " " + "$" + str(greatest_increase) + "\n")
+
+    file.write("Greatest Decrease in Profits: " + str(months[revenue_change.index(min(revenue_change))+1]) + " " + "$" + str(greatest_decrease) + "\n")
+
+    file.close()
