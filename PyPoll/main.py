@@ -1,7 +1,7 @@
 import os
 import csv
 
-poll_data = os.path.join("C:/Users/Layla Jeon/Desktop/GT-PTP-DATA-PT-08-2019-U-C/02-Homework/03-Python/Instructions/PyPoll/Resources/election_data.csv")
+poll_data = os.path.join("...", "Resources", "election_data.csv")
 
 
 total_votes = 0
