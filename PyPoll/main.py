@@ -49,7 +49,7 @@ print("-------------------------------")
 
 output_file = os.path.join("poll_result.txt")
 with open(output_file, "w", newline="") as file:
-    print("Election Results\n")
+    file.write("Election Results\n")
     file.write("-------------------------------\n")
     file.write(f"Total Votes: {total_votes}\n")
     file.write("-------------------------------\n")
