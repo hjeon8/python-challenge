@@ -1,7 +1,7 @@
 import os
 import csv
 
-poll_data = os.path.join("...", "Resources", "election_data.csv")
+poll_data = os.path.join("C:/Users/Layla Jeon/Desktop/GT-PTP-DATA-PT-08-2019-U-C/02-Homework/03-Python/Instructions/PyPoll/Resources/election_data.csv")
 
 
 total_votes = 0
@@ -44,9 +44,18 @@ print("-------------------------------")
 for x in range(len(candidates_unique)):
     print(f'{candidates_unique[x]} : {pct[x]}% ({candidate_vote_count[x]})')
 print("-------------------------------")
-print(f'Winner: {election_winner.upper()}')
+print(f'Winner: {election_winner}')
 print("-------------------------------")
 
-
-output_file = os.path.join("poll_results.txt")
-with open(output_file, "w", e
+output_file = os.path.join("poll_result.txt")
+with open(output_file, "w", newline="") as file:
+    print("Election Results\n")
+    file.write("-------------------------------\n")
+    file.write(f"Total Votes: {total_votes}\n")
+    file.write("-------------------------------\n")
+    for x in range(len(candidates_unique)):
+        file.write(f"{candidates_unique[x]} : {pct[x]}% ({candidate_vote_count[x]})\n")
+    file.write("-------------------------------\n")
+    file.write(f"Winner: {election_winner}\n")
+    file.write("-------------------------------")
+    file.close()
