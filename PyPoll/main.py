@@ -46,3 +46,7 @@ for x in range(len(candidates_unique)):
 print("-------------------------------")
 print(f'Winner: {election_winner.upper()}')
 print("-------------------------------")
+
+
+output_file = os.path.join("poll_results.txt")
+with open(output_file, "w", e
